@@ -1,8 +1,9 @@
-let rand = Math.floor(Math.random() * 100) + 1;
+let rand = Math.floor(Math.random() * 10000) + 100;
+rand /= 100
 let stop = 0
-let guess = Number(prompt("Input a whole number between 1 and 100 as a numeral:"));
+let guess = Number(prompt("Input a number between 1 and 100 as a numeral with up to two decimal places:"));
         while (stop == 0) {
-        if (isNaN(guess) == true || guess>100 || guess<1 || guess!=parseInt(guess)) {
+        if (isNaN(guess) == true || guess>100 || guess<1) {
             guess = Number(prompt("You did not enter a numeral between 1 and 100"));
         }
         else if(guess<rand) {
